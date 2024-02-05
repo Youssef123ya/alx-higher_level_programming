@@ -1,6 +1,4 @@
-class Square:
-    def __init__(self, length=0):
-        self.length = length
+import square
 
-    def area(self):
-        return self.length ** 2
+my_square = square.Square(3)
+print(my_square.area())
