@@ -1,14 +1,11 @@
-#!/usr/bin/env python3
 import urllib.request
 
-# Open the URL using a with statement
-with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
-    # Read the response content
-    content = response.read()
+url = 'https://alx-intranet.hbtn.io/status'
 
-# Display the response body
+with urllib.request.urlopen(url) as response:
+    body = response.read()
+
 print("Body response:")
-print("\t- type: {}".format(type(content)))
-print("\t- content: {}".format(content))
-print("\t- utf8 content: {}".format(content.decode('utf-8')))
-
+print("\t- type:", type(body))
+print("\t- content:", body)
+print("\t- utf8 content:", body.decode('utf-8'))
